@@ -4,7 +4,7 @@
     "Flo <florian.michel69250@gmail.com>"
   ],
   "description": "developer test for infinite",
-  "main": "index.html",
+  "main": "index.php",
   "license": "UNLICENCED",
   "homepage": "index.html",
   "ignore": [

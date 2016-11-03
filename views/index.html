@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="infinite">
+<head>
+    <meta charset="UTF-8">
+    <title>Infinite Developers - Test</title>
+
+    <link rel="stylesheet" href="./css/stylesheets/screen.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body ng-controller="MainCtrl">
+    <div id="page">
+        <header class="head">
+            <div class="head__ribbon">
+                <div class="head__ribbon__content">
+                    <div class="head__ribbon__logo">
+                        <a href="/">
+                            <figure>
+                                <img src="./images/company_logo.png" alt="Company logo"/>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="head__ribbon__contact">
+                        <p>contactez-nous</p>
+                        <ul ng-include="socials">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <nav main-nav></nav>
+            <div class="head__background">
+                <div class="content">
+                    <h1><span>Le premier site</span> des photographes indépendants</h1>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+
+        </main>
+
+        <footer class="foot">
+
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="./js/controllers/core.js"></script>
+</body>
+</html>

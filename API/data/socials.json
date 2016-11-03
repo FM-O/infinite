@@ -1,0 +1,31 @@
+[
+  {
+    "title": "facebook",
+    "link" : "http://test.com",
+    "src" : "./images/fb.jpg"
+  },
+
+  {
+    "title": "twitter",
+    "link" : "http://test2.com",
+    "src" : "./images/twitter.png"
+  },
+
+  {
+    "title": "linkedin",
+    "link" : "http://test3.com",
+    "src" : "./images/linkedin.jpg"
+  },
+
+  {
+    "title": "tumblr",
+    "link" : "http://test4.com",
+    "src" : "./images/tumblr.png"
+  },
+
+  {
+    "title": "youtube",
+    "link" : "http://test5.com",
+    "src" : "./images/youtube.png"
+  }
+]
