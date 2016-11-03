@@ -1,0 +1,21 @@
+{
+  "name": "infinite",
+  "authors": [
+    "Flo <florian.michel69250@gmail.com>"
+  ],
+  "description": "developer test for infinite",
+  "main": "index.html",
+  "license": "UNLICENCED",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.8",
+    "angular": "1.5.8"
+  }
+}
