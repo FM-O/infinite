@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="infinite">
+<head>
+    <meta charset="UTF-8">
+    <title>Infinite Developers - Test</title>
+
+    <link rel="stylesheet" href="./css/stylesheets/screen.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body ng-controller="MainCtrl">
+    <div id="page">
+        <header class="head">
+            <div class="head__ribbon">
+                <div class="head__ribbon__content">
+                    <div class="head__ribbon__logo">
+                        <a href="/">
+                            <figure>
+                                <img src="./images/company_logo.png" alt="Company logo"/>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="head__ribbon__contact">
+                        <p>contactez-nous</p>
+                        <ul>
+                            <li ng-repeat="social in socials track by $index">
+                                <a href="{{ social.link }}">
+                                    <img src="{{ social.src }}" alt="{{social.title}}" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <nav main-nav></nav>
+            <div class="head__background" style="background: url('{{images.main.src}}') center no-repeat; background-size: cover;">
+                <div class="content">
+                    <h1><span>{{ texts.titles.main.p1 }}</span> {{ texts.titles.main.p2 }}</h1>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="content__push">
+                <div class="content__push__wrapper">
+                    <div class="content__push__head">
+                        <div class="content__push__head__title">
+                            <h2>{{ texts.titles.sections.push }}</h2>
+                            <!-- TODO: better way for "after" line -->
+                        </div>
+                    </div>
+                    <article class="content__push__main">
+                        <div class="content__push__main__img">
+                            <img src="{{ images.push.src }}" alt="{{ images.push.title }}" />
+                            <span class="date">{{ images.push.date }}</span>
+                            <div class="title">
+                                <span class="title__1">expo</span>
+                                <span class="title__2">photo</span>
+                                <span class="title__3">lyon</span>
+                            </div>
+                        </div><!--
+                        --><div class="content__push__main__txt">
+                            <p class="synopsis">
+                                {{ texts.contents.push.head | limitTo: 350}}...
+                            </p>
+                            <p class="article">
+                                {{ texts.contents.push.content }}
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="content__interlude" style="background: url('{{ images.interlude.src }}') center no-repeat; background-size: contain;"></section>
+            <section class="content__news">
+                <div class="content__news__wrapper">
+                    <div class="content__news__head">
+                        <div class="content__news__head__title">
+                            <h2>{{ texts.titles.sections.news }}</h2>
+                            <!-- TODO: better way for "after" line -->
+                        </div>
+                    </div>
+                    <article class="content__news__main" ng-repeat="new in news">
+                        <div class="content__news__img">
+                            <figure>
+                                <img src="{{ new.image.src }}" alt="{{ new.image.title }}" />
+                            </figure>
+                        </div>
+                        <div class="content__news__details">
+                            <div class="features">
+                                <span class="features__date">{{ new.date }}</span>
+                                <span class="features__type">{{ new.type }}</span>
+                            </div>
+                            <div class="text">
+                                <p class="text__title">{{ new.title }}</p>
+                                <p class="text__short-desc">
+                                    {{ new.short_desc }}
+                                </p>
+                            </div>
+                            <div class="button">
+                                <a href="" title="lire plus">Lire plus</a>
+                            </div>
+                        </div>
+                    </article><!--
+                    -->
+                </div>
+            </section>
+            <section class="content__lee-jeffries">
+                <div class="content__lee-jeffries__wrapper">
+                    <div class="content__lee-jeffries__head">
+                        <div class="content__lee-jeffries__head__title">
+                            <h2>{{ texts.titles.sections.jeffries }}</h2>
+                            <!-- TODO: better way for "after" line -->
+                        </div>
+                    </div>
+                    <article class="content__lee-jeffries__main">
+                        <div class="line__1">
+                            <div class="hexagon" ng-repeat="work in works.line_5">
+                                <div class="hexagon__rec1" ng-mouseover="showText()">
+                                    <div class="hexagon__rec2" style="background: url('{{ work.image }}') center no-repeat; background-size: cover;"></div>
+                                    <div class="hexagon__rec3">
+                                        <div class="hexagon__rec3__txt">
+                                            <p>{{ work.title }}</p>
+                                            <p>{{ work.description }}</p>
+                                        </div>
+                                        <div class="hexagon__rec3__top"></div>
+                                        <div class="hexagon__rec3__bottom"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line__2">
+                            <div class="hexagon" ng-repeat="work in works.line_4">
+                                <div class="hexagon__rec1" ng-mouseover="showText()">
+                                    <div class="hexagon__rec2" style="background: url('{{ work.image }}') center no-repeat; background-size: cover;"></div>
+                                    <div class="hexagon__rec3">
+                                        <div class="hexagon__rec3__txt">
+                                            <p>{{ work.title }}</p>
+                                            <p>{{ work.description }}</p>
+                                        </div>
+                                        <div class="hexagon__rec3__top"></div>
+                                        <div class="hexagon__rec3__bottom"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="content__interactive-features">
+                <div class="content__interactive-features__wrapper">
+                    <article class="content__interactive-features__main">
+                        <div class="title">
+                            <p>Documentation</p>
+                        </div>
+                        <div class="download">
+                            <a href="#">
+                                <span class="download__icon">
+                                    <img src="{{ images.download.src }}" alt="{{ images.download.title }}"/>
+                                </span><!--
+                                --><p class="download__text">Téléchargez le dossier de candidature au statut national étudiant entrepreneur</p>
+                            </a>
+                        </div>
+                        <div class="download">
+                            <a href="#">
+                                <span class="download__icon">
+                                    <img src="{{ images.download.src }}" alt="{{ images.download.title }}"/>
+                                </span><!--
+                                --><p class="download__text">Téléchargez le dossier de candidature au prix pépite 2016</p>
+                            </a>
+                        </div>
+                    </article><!--
+                    --><article class="content__interactive-features__main">
+                        <div class="title">
+                            <p>Newsletter</p>
+                        </div>
+                        <form method="post" action="#">
+                            <input class="full-width" type="email" placeholder="email" />
+                            <input type="text" placeholder="nom" /><!--
+                            --><input type="text" placeholder="prénom" />
+                            <input class="full-width" type="submit" value="s'inscrire" />
+                        </form>
+                    </article>
+                </div>
+            </section>
+            <section class="content__social-networks">
+                <div class="content__social-networks__wrapper">
+                    <ul>
+                        <li ng-repeat="social in socials">
+                            <a href="#">
+                                <figure>
+                                    <img src="{{ social.src }}" alt=""/>
+                                    <figcaption>{{ social.title }}</figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer class="foot">
+            <div class="foot__wrapper">
+                <div class="content">
+                    <div class="content__item">
+                        <div>
+                            <h3><span>Soutenez</span> la Photo</h3>
+                            <a class="donate" href="#">faire un don</a>
+                        </div>
+                    </div>
+                    <div class="content__item">
+                        <div>
+                            <p class="title">initiative portée par :</p>
+                            <img class="logo_footer" src="{{ images.footer_logo.src }}" alt="{{ images.footer_logo.title }}" />
+                        </div>
+                    </div>
+                    <div class="content__item">
+                        <div>
+                            <p class="title">Rubriques</p>
+                            <ul>
+                                <li><a href="">Titre rubrique</a></li>
+                                <li><a href="">Boîte à outils</a></li>
+                                <li><a href="">Portrait blabla</a></li>
+                                <li><a href="">à propos</a></li>
+                                <li><a href="">mentions légales</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content__item">
+                        <div>
+                            <p class="title">Youtube</p>
+                            <a href=""><img src="" alt="vidéo youtube" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="./app/core.js"></script>
+    <script type="text/javascript" src="./app/directives.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "images" : {
+    "main" : {
+      "title" : "photographe",
+      "src" : "./images/background_header.jpg",
+      "date" : "undefined"
+    },
+    "push" : {
+      "title" : "expo photo lyon",
+      "src" : "./images/expo_photo.jpg",
+      "date" : "22 juillet 2016"
+    },
+    "interlude" : {
+      "title" : "je suis passionné",
+      "src" : "./images/je_suis_passionne.jpg",
+      "date" : "undefined"
+    },
+    "download" : {
+      "title" : "télécharger le document",
+      "src" : "./images/dl.png",
+      "date" : "undefined"
+    },
+    "footer_logo" : {
+      "title" : "Logo entreprise",
+      "src" : "./images/company_logo_footer.jpg",
+      "date" : "undefined"
+    }
+  },
+  "texts" : {
+    "titles" : {
+      "main" : {
+        "p1" : "le premier site",
+        "p2" : "des photographes indépendants"
+      },
+      "sections" : {
+        "push" : "à la une",
+        "news" : "actualités",
+        "jeffries" : "Lee Jeffries"
+      }
+    },
+    "contents" : {
+      "push" : {
+        "head" : "Kogi waistcoat vape franzen readymade skateboard. Viral lumbersexual narwhal pitchfork disrupt, pabst pok pok tousled pour-over swag cronut. Poke pour-over ugh shoreditch, craft beer twee marfa blog tacos. Messenger bag skateboard freegan, la croix plaid quinoa prism. Kitsch selfies sriracha af, squid ennui distillery sartorial schlitz enamel pin organic. Cronut authentic seitan pok pok lo-fi, pickled blue bottle migas lumbersexual celiac activated charcoal cred marfa. Cardigan bitters ennui portland williamsburg selvage echo park tilde dreamcatcher, jean shorts messenger bag bushwick enamel pin.",
+        "content" : "Keytar mixtape hashtag, godard chia activated charcoal snackwave organic fap food truck. Vexillologist XOXO neutra photo booth, pok pok messenger bag pour-over copper mug lyft hammock pitchfork semiotics raw denim shabby chic crucifix. Literally hashtag gochujang, cliche fam YOLO mustache viral leggings PBR&B. Sriracha pop-up stumptown, echo park kinfolk health goth artisan. Gastropub ramps lyft, yuccie vice XOXO sriracha. Drinking vinegar cred venmo bushwick, flannel fanny pack microdosing keytar flexitarian franzen wayfarers mumblecore church-key. Tacos drinking vinegar health goth man braid pork belly artisan, cred kickstarter."
+      }
+    }
+  }
+}

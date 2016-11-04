@@ -1,0 +1,22 @@
+{
+  "news_1" : {
+    "title" : "lancement du prix photo tremplin de l'année",
+    "type" : "actualités",
+    "date" : "22/07/2016",
+    "short_desc" : "Bespoke roof party aesthetic celiac next level, direct trade trust fund hashtag beard tattooed tofu fap kombucha pok pok. Man bun whatever kombucha pop-up, jean shorts salvia put a bird on it 3 wolf moon +1 migas vice waistcoat",
+    "image" : {
+      "src" : "./images/portraits/old_man_with_beard.jpg",
+      "title" : "vieux barbu"
+    }
+  },
+  "news_2" : {
+    "title" : "lancement du prix photo tremplin de l'année",
+    "type" : "actualités",
+    "date" : "29/07/2016",
+    "short_desc" : "Bespoke roof party aesthetic celiac next level, direct trade trust fund hashtag beard tattooed tofu fap kombucha pok pok. Man bun whatever kombucha pop-up, jean shorts salvia put a bird on it 3 wolf moon +1 migas vice waistcoat.",
+    "image" : {
+      "src" : "./images/portraits/fillette.png",
+      "title" : "fillette"
+    }
+  }
+}
