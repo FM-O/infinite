@@ -1,4 +1,3 @@
-$main-color: #18c6a3;
 $app-width: 1280px;
 
 // fonts
@@ -7,4 +6,34 @@ $default-size: 14px;
 
 
 //colors
+$main-color: #18c6a3;
 $font-grey: #919191;
+$light-grey: #d0d0d0;
+$light-blue: #58b6d0;
+
+//Mixins
+@mixin section-heading($title-width, $left-right-padding, $margin-right) {
+  margin-bottom: 40px;
+  &__title {
+    display: inline-block;
+    background: $main-color;
+    color: #FFFFFF;
+    padding: 20px $left-right-padding;
+    width: $title-width;
+    text-align: left;
+    vertical-align: middle;
+    margin-right: $margin-right;
+    h2 {
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+  }
+  &:after {
+    display: inline-block;
+    content: "";
+    height: 2px;
+    background: $light-grey;
+    width: calc(99.5% - #{$title-width} - #{$left-right-padding * 2} - #{$margin-right});
+    vertical-align: middle;
+  }
+}

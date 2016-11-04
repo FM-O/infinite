@@ -4,8 +4,12 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/css3/transition";
 @import "variables";
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// MAIN CONFIG ////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
 #page {
   margin: 0 auto;
   font-family: $default-family;
@@ -14,7 +18,11 @@
   }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// HEADER /////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
 .head {
+  ////////////////////////////////// WHITE RIBBON ////////////////////////////////////////
   &__ribbon {
     background: white;
     overflow: hidden;
@@ -63,6 +71,7 @@
       }
     }
   }
+  /////////////////////////////////////// NAV /////////////////////////////////////////////
   nav {
     position: absolute;
     width: 100%;
@@ -132,6 +141,7 @@
       }
     }
   }
+  ////////////////////////////////// MAIN PICTURE ////////////////////////////////////////
   &__background {
     display: table;
     width: 100%;
@@ -151,6 +161,378 @@
           display: block;
           font-size: 42px;
           margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////// CONTENT /////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+main.content {
+  section {
+    ////////////////////////////////// PUSH SECTION ////////////////////////////////////////
+    &.content__push {
+      padding: 35px 0 80px;
+      .content__push {
+        &__wrapper {
+          max-width: $app-width;
+          margin: 0 auto;
+        }
+        &__head {
+          @include section-heading(100px, 25px, 35px);
+        }
+        &__main {
+          &__img {
+            position: relative;
+            display: inline-block;
+            width: 47.5%;
+            img {
+              width: 100%;
+            }
+            .date {
+              position: absolute;
+              top: 50px;
+              left: 50px;
+              display: block;
+              padding: 8px 20px;
+              color: white;
+              text-transform: uppercase;
+              font-size: 22px;
+              background: $main-color;
+            }
+            .title {
+              position: absolute;
+              bottom: 50px;
+              left: 50px;
+              span {
+                display: block;
+                font-size: 48px;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-weight: bold;
+              }
+            }
+          }
+          &__txt {
+            display: inline-block;
+            vertical-align: top;
+            width: 47.5%;
+            margin-left: 5%;
+            p {
+              color: $font-grey;
+              line-height: 1.4;
+              &.synopsis {
+                font-weight: bold;
+                margin-bottom: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+    ////////////////////////////////// INTERLUDE SECTION ////////////////////////////////////////
+    &.content__interlude {
+      width: 100%;
+      background: url("../../images/je_suis_passionne.jpg") center no-repeat;
+      background-size: contain;
+      height: 220px;
+    }
+    ////////////////////////////////// NEWS SECTION ////////////////////////////////////////
+    &.content__news {
+      padding: 80px 0 100px;
+      .content__news {
+        &__wrapper {
+          max-width: $app-width;
+          margin: 0 auto;
+        }
+        &__head {
+          @include section-heading(200px, 25px, 35px);
+        }
+        &__main {
+          display: inline-block;
+          vertical-align: top;
+          width: 49.5%;
+          &:first-of-type {
+            margin-right: 1%;
+          }
+        }
+        &__img {
+          figure {
+            height: 400px;
+            overflow: hidden;
+            img {
+              width: 100%;
+            }
+          }
+        }
+        &__details {
+          .features {
+            margin: 10px 0 20px;
+            span {
+              padding: 10px 25px;
+              font-size: 14px;
+              display: inline-block;
+              background: $light-grey;
+              color: #FFFFFF;
+              text-transform: uppercase;
+              &:first-of-type {
+                margin-right: 8px;
+              }
+            }
+          }
+          .text {
+            color: $font-grey;
+            line-height: 1.4;
+            margin-bottom: 25px;
+            &__title {
+              text-transform: uppercase;
+              font-size: 22px;
+              margin-bottom: 15px;
+            }
+          }
+          .button {
+            a {
+              display: inline-block;
+              border: 2px solid $main-color;
+              padding: 10px 25px;
+              color: $main-color;
+              text-transform: uppercase;
+              @include transition(color 300ms ease, background 300ms ease);
+              &:hover {
+                color: #FFFFFF;
+                background: $main-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    ////////////////////////////////// LEE JEFFRIES SECTION ////////////////////////////////////////
+    &.content__lee-jeffries {
+      padding: 50px 0 50px;
+      background: #f0f0f0;
+      .content__lee-jeffries {
+        &__wrapper {
+          max-width: $app-width;
+          margin: 0 auto;
+        }
+        &__head {
+          @include section-heading(200px, 25px, 35px);
+        }
+        &__main {
+          height: 500px;
+          width: 95%;
+          margin: 0 auto;
+          background: rebeccapurple;
+        }
+      }
+    }
+    ////////////////////////////////// INTERACTIVE FEATURES SECTION ////////////////////////////////////////
+    &.content__interactive-features {
+      padding: 50px 0 50px;
+      background: #e2e2e2;
+      .content__interactive-features {
+        &__wrapper {
+          max-width: $app-width;
+          margin: 0 auto;
+        }
+        &__main {
+          display: inline-block;
+          vertical-align: top;
+          .title {
+            margin-bottom: 20px;
+            p {
+              display: inline-block;
+              padding: 12px 20px;
+              background: $light-blue;
+              color: #FFFFFF;
+              text-transform: uppercase;
+            }
+          }
+          .download {
+            display: block;
+            cursor: pointer;
+            &__icon {
+              display: inline-block;
+              width: 40px;
+              vertical-align: middle;
+              img {
+                width: 100%;
+              }
+            }
+            &__text {
+              display: inline-block;
+              vertical-align: middle;
+              margin-left: 15px;
+              text-transform: uppercase;
+              color: $font-grey;
+              font-weight: bold;
+              width: calc(100% - 55px);
+            }
+            & ~ .download {
+              margin-top: 20px;
+            }
+          }
+          &:first-of-type {
+            width: 66.666%;
+          }
+          &:last-of-type {
+            width: 33.333%;
+          }
+          form {
+            input {
+              box-sizing: border-box;
+              padding: 8px 10px;
+              display: inline-block;
+              text-transform: uppercase;
+              border: none;
+              margin-bottom: 6px;
+              width: calc(50% - 3px);
+              font-weight: bold;
+              &:nth-child(3) {
+                margin-left: 6px;
+              }
+              &.full-width {
+                display: block;
+                width: 100%;
+                margin-left: 0;
+                &[type="submit"] {
+                  border: 2px solid $main-color;
+                  color: $main-color;
+                  margin-top: 15px;
+                  @include transition(background 300ms ease, color 300ms ease);
+                  &:hover {
+                    background: $main-color;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    ////////////////////////////////// SOCIAL NETWORKS SECTION ////////////////////////////////////////
+    &.content__social-networks {
+      background: $light-blue;
+      .content__social-networks {
+        &__wrapper {
+          max-width: $app-width;
+          margin: 0 auto;
+          ul {
+            display: table;
+            height: 140px;
+            margin: 0 auto;
+            li {
+              display: table-cell;
+              height: 100%;
+              width: 20%;
+              vertical-align: middle;
+              background: $light-blue;
+              text-align: center;
+              a {
+                color: #FFFFFF;
+                figure {
+                  figcaption {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 15px;
+                  }
+                  img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 20%;
+                    margin-right: 15px;
+                  }
+                }
+              }
+              &:hover {
+                background: darken($light-blue, 15%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////// FOOTER§ /////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+.foot {
+  padding: 80px 0 150px;
+  background: #343635;
+  h3 {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    span {
+      display: block;
+    }
+  }
+  a {
+    color: #FFFFFF;
+  }
+  p {
+    color: #FFFFFF;
+  }
+  &__wrapper {
+    max-width: $app-width;
+    margin: 0 auto;
+    .content {
+      display: table;
+      width: 100%;
+      &__item {
+        display: table-cell;
+        width: 25%;
+        text-align: center;
+        a.donate {
+          border: 2px solid white;
+          padding: 8px 25px;
+          font-size: 22px;
+          font-weight: bold;
+          @include transition(background 300ms ease, color 300ms ease);
+          &:hover {
+            background: white;
+            color: #343635;
+          }
+        }
+        div {
+          display: inline-block;
+          vertical-align: top;
+          text-align: left;
+        }
+        ul {
+          li {
+            margin-top: 10px;
+            a {
+              text-transform: uppercase;
+              color: $font-grey;
+              font-size: 12px;
+              font-weight: bold;
+              &:hover {
+                color: white;
+              }
+            }
+          }
+        }
+        .title {
+          text-transform: uppercase;
+          font-size: 18px;
+          font-weight: bold;
+          &:after {
+            content: '';
+            display: block;
+            margin: 15px 0;
+            width: 30px;
+            height: 2px;
+            background: white;
+          }
         }
       }
     }
