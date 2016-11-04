@@ -12,7 +12,7 @@
     },
     "interlude" : {
       "title" : "je suis passionné",
-      "src" : "./images/je_suis_passionne.jpg",
+      "src" : "./images/nikon.jpg",
       "date" : "undefined"
     },
     "download" : {
@@ -23,6 +23,11 @@
     "footer_logo" : {
       "title" : "Logo entreprise",
       "src" : "./images/company_logo_footer.jpg",
+      "date" : "undefined"
+    },
+    "footer_yt_video" : {
+      "title" : "vidéo youtube",
+      "src" : "./images/video_yt.png",
       "date" : "undefined"
     }
   },
@@ -41,7 +46,7 @@
     "contents" : {
       "push" : {
         "head" : "Kogi waistcoat vape franzen readymade skateboard. Viral lumbersexual narwhal pitchfork disrupt, pabst pok pok tousled pour-over swag cronut. Poke pour-over ugh shoreditch, craft beer twee marfa blog tacos. Messenger bag skateboard freegan, la croix plaid quinoa prism. Kitsch selfies sriracha af, squid ennui distillery sartorial schlitz enamel pin organic. Cronut authentic seitan pok pok lo-fi, pickled blue bottle migas lumbersexual celiac activated charcoal cred marfa. Cardigan bitters ennui portland williamsburg selvage echo park tilde dreamcatcher, jean shorts messenger bag bushwick enamel pin.",
-        "content" : "Keytar mixtape hashtag, godard chia activated charcoal snackwave organic fap food truck. Vexillologist XOXO neutra photo booth, pok pok messenger bag pour-over copper mug lyft hammock pitchfork semiotics raw denim shabby chic crucifix. Literally hashtag gochujang, cliche fam YOLO mustache viral leggings PBR&B. Sriracha pop-up stumptown, echo park kinfolk health goth artisan. Gastropub ramps lyft, yuccie vice XOXO sriracha. Drinking vinegar cred venmo bushwick, flannel fanny pack microdosing keytar flexitarian franzen wayfarers mumblecore church-key. Tacos drinking vinegar health goth man braid pork belly artisan, cred kickstarter."
+        "content" : "Keytar mixtape hashtag, godard chia activated charcoal snackwave organic fap food truck. Vexillologist XOXO neutra photo booth, pok pok messenger bag pour-over copper mug lyft hammock pitchfork semiotics raw denim shabby chic crucifix. Literally hashtag gochujang, cliche fam YOLO mustache viral leggings PBR&B. Sriracha pop-up stumptown, echo park kinfolk health goth artisan. Gastropub ramps lyft, yuccie vice XOXO sriracha. Drinking vinegar cred venmo bushwick, flannel fanny pack microdosing keytar flexitarian franzen wayfarers mumblecore church-key. Tacos drinking vinegar health goth man braid pork bellyartisan, cred kickstarter."
       }
     }
   }

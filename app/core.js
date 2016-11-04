@@ -1,18 +1,18 @@
 "use strict";
 
-var infinite = angular.module('infinite', ['ngRoute']);
+var infinite = angular.module('infinite', ['ngParallax']);
 
 infinite.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
 
     $scope.loadSocials = function () {
-        $http.get("./API/data/socials.json")
+        $http.get("./api/get.php?guess=socials")
             .success(function (data) {
                 $scope.socials = data;
             });
     }();
 
     $scope.loadImages = function () {
-        $http.get("./API/data/app.json")
+        $http.get("./api/get.php?guess=app")
             .success(function (data) {
                 $scope.images = data.images;
                 $scope.texts = data.texts;
@@ -20,26 +20,17 @@ infinite.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
     }();
 
     $scope.loadNews = function () {
-        $http.get("./API/data/news.json")
+        $http.get("./api/get.php?guess=news")
             .success(function (data) {
                 $scope.news = data;
             });
     }();
 
-    $scope.loadNews = function () {
-        $http.get("./API/data/jeffries_work.json")
+    $scope.loadWorks = function () {
+        $http.get("./api/get.php?guess=jeffries_work")
             .success(function (data) {
                 $scope.works = data;
             });
     }();
-
-    $scope.showText = function ($data) {
-
-        var test = $data;
-        console.log(test);
-        setTimeout(function () {
-
-        }, 350);
-    }
 }]);
 

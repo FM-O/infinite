@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular-route": "^1.5.8",
-    "angular": "1.5.8"
+    "angular": "1.5.8",
+    "ng-simple-parallax": "*"
   }
 }

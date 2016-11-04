@@ -20,7 +20,7 @@
                         </a>
                     </div>
                     <div class="head__ribbon__contact">
-                        <p>contactez-nous</p>
+                        <a href="mailto:test@test.com">contactez-nous</a>
                         <ul>
                             <li ng-repeat="social in socials track by $index">
                                 <a href="{{ social.link }}">
@@ -69,7 +69,9 @@
                     </article>
                 </div>
             </section>
-            <section class="content__interlude" style="background: url('{{ images.interlude.src }}') center no-repeat; background-size: contain;"></section>
+            <section class="content__interlude">
+                <div ng-parallax pattern="'./images/nikon.jpg'" speed="-2" reverse="true" style="background-repeat: no-repeat!important;"></div>
+            </section>
             <section class="content__news">
                 <div class="content__news__wrapper">
                     <div class="content__news__head">
@@ -129,7 +131,7 @@
                         </div>
                         <div class="line__2">
                             <div class="hexagon" ng-repeat="work in works.line_4">
-                                <div class="hexagon__rec1" ng-mouseover="showText()">
+                                <div class="hexagon__rec1">
                                     <div class="hexagon__rec2" style="background: url('{{ work.image }}') center no-repeat; background-size: cover;"></div>
                                     <div class="hexagon__rec3">
                                         <div class="hexagon__rec3__txt">
@@ -227,7 +229,7 @@
                     <div class="content__item">
                         <div>
                             <p class="title">Youtube</p>
-                            <a href=""><img src="" alt="vidéo youtube" /></a>
+                            <a href=""><img class="yt_video" src="{{ images.footer_yt_video.src }}" alt="{{ images.footer_yt_video.title }}" /></a>
                         </div>
                     </div>
                 </div>
@@ -236,7 +238,7 @@
     </div>
 
     <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="./bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="./bower_components/ng-simple-parallax/src/ngParallax.min.js"></script>
     <script type="text/javascript" src="./app/core.js"></script>
     <script type="text/javascript" src="./app/directives.js"></script>
 </body>
